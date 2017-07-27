@@ -17,13 +17,12 @@ function showCountriesList(resp) {
 	countriesList.empty();
 	resp.forEach(function(item) {
 		result += '\
-			<div class="main-container"> \
 				<li class="name"> \
 					<h1>' + item.name + '</h1>' + '\
 					<img src= ' + item.flag + ' class="flag"> \
 				</li> \
 				<h2 class="background-information">Background Information : </h2> \
-				<div class="countries-container"> \
+				<span class="countries-container"> \
 					<li> \
 						<span class="capitals">Capital</span> : <span class="part">' + item.capital + '</span> \
 					</li> \
@@ -42,8 +41,7 @@ function showCountriesList(resp) {
 		            <li> \
 		            	<span class="capitals">Currency</span> : <span class="part">' + item.currencies[0].code + '</span> \
 		            </li> \
-            	</div> \
-            </div> \
+            	</span> \
 		';
 	});
 	$(result).appendTo(countriesList);
